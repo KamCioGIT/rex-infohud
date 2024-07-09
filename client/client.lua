@@ -24,14 +24,14 @@ end)
 CreateThread(function()
     while true do
         Wait(5)
-		if LocalPlayer.state['isLoggedIn'] then
-			local playercash = RSGCore.Functions.GetPlayerData().money['cash']
-			if isLoggedIn and incinematic == false and inBathing == false and inClothing == false and showUI and Config.ShowInfoHud == true then
-				DrawTxt("ID : "..tonumber(GetPlayerServerId(PlayerId())).."  - Time : "..string.format("%0.2d", GetClockHours())..":"..string.format("%0.2d", GetClockMinutes()).." - Cash : $"..string.format("%.2f", playercash), 0.01, 0.97, 0.4, 0.4, true, 255, 255, 255, 255, true)
-			end
-		else
-			Wait(3000)
-		end
+        if LocalPlayer.state['isLoggedIn'] then
+            local playercash = RSGCore.Functions.GetPlayerData().money['cash']
+            if isLoggedIn and incinematic == false and inBathing == false and inClothing == false and showUI and Config.ShowInfoHud == true then
+                DrawTxt("ID : "..tonumber(GetPlayerServerId(PlayerId())).."  - Time : "..string.format("%0.2d", GetClockHours())..":"..string.format("%0.2d", GetClockMinutes()).." - Cash : $"..string.format("%.2f", playercash), 0.01, 0.97, 0.4, 0.4, true, 255, 255, 255, 255, true)
+            end
+        else
+            Wait(3000)
+        end
     end
 end)
 
